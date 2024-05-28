@@ -23,8 +23,8 @@ interface ArticleParamsFormProps {
 }
 
 export const ArticleParamsForm: React.FC<ArticleParamsFormProps> = ({
-																		setPageData,
-																	}) => {
+	setPageData,
+}) => {
 	const [isOpen, setIsOpen] = useState(false);
 	const [paramsState, setParamsState] =
 		useState<ArticleStateType>(defaultArticleState);
@@ -73,9 +73,9 @@ export const ArticleParamsForm: React.FC<ArticleParamsFormProps> = ({
 					onSubmit={handleSubmit}
 					onReset={handleReset}
 					className={styles.form}>
-					<div className={styles.title}>
-						<Text as='h2'>Задайте параметры</Text>
-					</div>
+					<Text as='h2' size={31} weight={800} uppercase={true}>
+						Задайте параметры
+					</Text>
 					<Select
 						title='Шрифт'
 						selected={paramsState.fontFamilyOption}
