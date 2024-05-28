@@ -13,7 +13,10 @@ export const ArrowButtonStory: Story = {
 	render: () => {
 		return (
 			<>
-				<ArrowButton />
+				<ArrowButton
+					onToggle={() => console.log('Toggling sidebar')}
+					isOpen={true}
+				/>
 			</>
 		);
 	},
